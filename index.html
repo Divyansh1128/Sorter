@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 6h18l-2 13H5L3 6z"/>
+                            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1>Sorting Visualizer</h1>
+                        <p>Interactive Algorithm Demonstration</p>
+                    </div>
+                </div>
+                <div class="status">
+                    <div class="status-indicator"></div>
+                    <span id="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="algorithm-select">Algorithm:</label>
+                <select id="algorithm-select">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="heap">Heap Sort</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="array-size">Array Size:</label>
+                <input type="range" id="array-size" min="10" max="100" value="50">
+                <span id="size-value">50</span>
+            </div>
+
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="10" value="5">
+                <span id="speed-value">5</span>
+            </div>
+
+            <div class="button-group">
+                <button id="generate-btn" class="btn btn-secondary">Generate New Array</button>
+                <button id="sort-btn" class="btn btn-primary">Start Sorting</button>
+                <button id="stop-btn" class="btn btn-danger" disabled>Stop</button>
+            </div>
+        </div>
+
+        <!-- Visualization Area -->
+        <div class="visualization">
+            <div id="array-container" class="array-container"></div>
+        </div>
+
+        <!-- Algorithm Info -->
+        <div class="algorithm-info">
+            <div class="info-card">
+                <h3 id="algo-name">Bubble Sort</h3>
+                <div class="info-stats">
+                    <div class="stat">
+                        <span class="stat-label">Time Complexity:</span>
+                        <span id="time-complexity">O(n²)</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Space Complexity:</span>
+                        <span id="space-complexity">O(1)</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Comparisons:</span>
+                        <span id="comparisons">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Swaps:</span>
+                        <span id="swaps">0</span>
+                    </div>
+                </div>
+                <p id="algo-description">
+                    Bubble Sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
+                </p>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color default"></div>
+                <span>Unsorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color comparing"></div>
+                <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color swapping"></div>
+                <span>Swapping</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color sorted"></div>
+                <span>Sorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color pivot"></div>
+                <span>Pivot</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Created by <span class="creator-name">Divyansh Raj</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "sorting-algorithm-visualizer",
+  "version": "1.0.0",
+  "description": "Interactive visualization of sorting algorithms",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server ."
+  },
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "visualization",
+    "education",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sorting-visualizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/sorting-visualizer/issues"
+  },
+  "homepage": "https://github.com/yourusername/sorting-visualizer#readme"
+}
